@@ -33,6 +33,7 @@
         <primefaces.version>5.1</primefaces.version>
         <quartz-scheduler.version>1.8.6</quartz-scheduler.version>
         <junit.version>4.9</junit.version>
+        <commons.dbcp>1.4</commons.dbcp>
     </properties>
 
     <dependencyManagement>
@@ -126,6 +127,13 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+
+            <!--Other-->
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${commons.dbcp}</version>
             </dependency>
 
 

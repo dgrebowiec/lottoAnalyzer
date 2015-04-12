@@ -6,6 +6,9 @@ import java.util.Date;
  * Created by Darek on 2015-03-22.
  */
 public class ImportDto {
+
+    private String line;
+
     private Integer number1;
     private Integer number2;
     private Integer number3;
@@ -13,6 +16,13 @@ public class ImportDto {
     private Integer number5;
     private Integer number6;
     private Date date;
+
+
+    private void ImportDto(){
+
+    }
+
+
 
     public Integer getNumber1() {
         return number1;

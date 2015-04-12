@@ -10,5 +10,6 @@
 
     <context:component-scan base-package="pl.lottoanalyzer.model" />
 
+    <import resource="applicationContext-hibernate.xml"/>
 
 </beans>

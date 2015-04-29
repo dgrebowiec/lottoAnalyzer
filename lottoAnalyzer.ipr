@@ -226,19 +226,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/la-android/la-android.iml" filepath="$PROJECT_DIR$/la-android/la-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-android/la-android.iml" filepath="$PROJECT_DIR$/la-android/la-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-core/la-core.iml" filepath="$PROJECT_DIR$/la-core/la-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/la-core/la-core.iml" filepath="$PROJECT_DIR$/la-core/la-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/la-import/la-import.iml" filepath="$PROJECT_DIR$/la-import/la-import.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-import/la-import.iml" filepath="$PROJECT_DIR$/la-import/la-import.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-integration/la-integration.iml" filepath="$PROJECT_DIR$/la-integration/la-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/la-integration/la-integration.iml" filepath="$PROJECT_DIR$/la-integration/la-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/la-persistent/la-persistent.iml" filepath="$PROJECT_DIR$/la-persistent/la-persistent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-persistent/la-persistent.iml" filepath="$PROJECT_DIR$/la-persistent/la-persistent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/la-web/la-web.iml" filepath="$PROJECT_DIR$/la-web/la-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/la-web/la-web.iml" filepath="$PROJECT_DIR$/la-web/la-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/lotto-analyzer.iml" filepath="$PROJECT_DIR$/lotto-analyzer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lottoAnalyzer.iml" filepath="$PROJECT_DIR$/lottoAnalyzer.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

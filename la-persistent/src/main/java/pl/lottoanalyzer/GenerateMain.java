@@ -16,7 +16,7 @@ public class GenerateMain {
         entityManager.persist(new Result());
         entityManager.getTransaction().commit();*/
 
-        new ClassPathXmlApplicationContext("applicationContext-hibernate.xml");
+        new ClassPathXmlApplicationContext("spring/applicationContext-generatorDb.xml");
     }
 
 }

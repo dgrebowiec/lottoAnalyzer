@@ -10,12 +10,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>la-core</module>
+        <!--<module>la-core</module>-->
         <module>la-integration</module>
-        <module>la-persistent</module>
+        <module>la-core</module>
         <module>la-web</module>
         <module>la-import</module>
-        <module>la-android</module>
+        <!--<module>la-android</module>-->
     </modules>
 
     <properties>
@@ -32,8 +32,9 @@
         <glassfish.version>2.2.6</glassfish.version>
         <primefaces.version>5.1</primefaces.version>
         <quartz-scheduler.version>1.8.6</quartz-scheduler.version>
-        <junit.version>4.9</junit.version>
+        <junit.version>4.11</junit.version>
         <commons.dbcp>1.4</commons.dbcp>
+        <apache.commons.version>3.4</apache.commons.version>
     </properties>
 
     <dependencyManagement>
@@ -135,6 +136,13 @@
                 <artifactId>commons-dbcp</artifactId>
                 <version>${commons.dbcp}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.version}</version>
+            </dependency>
+
 
 
         </dependencies>

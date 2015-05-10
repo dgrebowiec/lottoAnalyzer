@@ -1,12 +1,17 @@
 package pl.lottoanalyzer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pl.lottoanalyzer.dto.ImportDto;
+import pl.lottoanalyzer.model.Result;
+import pl.lottoanalyzer.services.ResultService;
+import pl.lottoanalyzer.test.Testt;
+import pl.lottoanalyzer.utils.ImportUtil;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -17,7 +22,14 @@ import java.util.stream.Stream;
 @Component
 public class ImportResults {
 
-    private List<ImportDto> importDtoList = null;
+    @Autowired
+    private ResultService resultService;
+
+    @Autowired
+    private Testt testt;
+
+
+    List<Result> results = new ArrayList<>();
 
     public void importFile(){
         try {
@@ -30,12 +42,23 @@ public class ImportResults {
     private void readFile() throws IOException{
         Path path = Paths.get("file_import", "dl.txt");
         try(Stream<String> lines = Files.lines(path)){
-            lines.forEach(s -> System.out.println(s));
+            lines.forEach(s -> setResults(s));
         }
     }
 
-    public List<ImportDto> getImportDtoList(){
-        return importDtoList;
+    public void setResults(String s) {
+       // results = new ArrayList<>();
+        results.add(ImportUtil.resulMapping(s));
     }
+
+    public void importResuls(){
+        resultService.saveAllResults(results);
+      //  testt.dupa();
+    }
+
+    public List<Result> getResults() {
+        return results;
+    }
+
 
 }

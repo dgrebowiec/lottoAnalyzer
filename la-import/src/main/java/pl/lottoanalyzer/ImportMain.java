@@ -21,7 +21,8 @@ public class ImportMain {
     }
 
     public void test(){
-        importResults.importFile();
-        importResults.importResuls();
+//        importResults.importFile();
+//        importResults.importResuls();
+        importResults.printResults();
     }
 }

@@ -56,6 +56,13 @@ public class ImportResults {
       //  testt.dupa();
     }
 
+    public void printResults(){
+        List<Result> resultList = resultService.findAllResults();
+        for (Result result : resultList){
+            System.out.println(">> "+result);
+        }
+    }
+
     public List<Result> getResults() {
         return results;
     }

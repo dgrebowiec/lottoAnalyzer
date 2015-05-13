@@ -110,6 +110,7 @@
                 <version>${hibernate-core.version}</version>
             </dependency>
 
+
             <!--JSF-->
             <dependency>
                 <groupId>org.glassfish</groupId>

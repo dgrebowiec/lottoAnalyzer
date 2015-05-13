@@ -27,4 +27,9 @@ public class ResultService {
         }
     }
 
+    @Transactional
+    public List<Result> findAllResults(){
+        return resultDao.findAll();
+    }
+
 }

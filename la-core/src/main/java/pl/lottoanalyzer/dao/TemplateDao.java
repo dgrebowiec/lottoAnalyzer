@@ -1,17 +1,20 @@
 package pl.lottoanalyzer.dao;
 
-        import org.hibernate.Session;
-        import org.hibernate.SessionFactory;
-        import org.hibernate.Transaction;
-        import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import pl.lottoanalyzer.model.Result;
 
-        import java.io.Serializable;
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * User: mgalezewska
  * Date: 2015-05-09
  */
-public class TemplateDao<T> implements IDao<T> {
+public abstract class TemplateDao<T> implements IDao<T> {
 
     @Autowired
     SessionFactory sessionFactory;
@@ -25,4 +28,18 @@ public class TemplateDao<T> implements IDao<T> {
         transaction.commit();
         session.close();
     }
+
+    @Override
+    public List<Result> findAll() {
+//        Session session = sessionFactory.openSession();
+        List<Result> resultList = getCurrentSession().createCriteria(Result.class).list();
+        //session.close();
+        return resultList;
+    }
+
+    private Session getCurrentSession(){
+        return sessionFactory.getCurrentSession();
+    }
+
+
 }

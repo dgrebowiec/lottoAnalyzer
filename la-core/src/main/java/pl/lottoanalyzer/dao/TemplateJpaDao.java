@@ -22,7 +22,7 @@ public class TemplateJpaDao<T> implements IDao<T> {
     }
 
     @Override
-    public List<Result> findAll() {
+    public List<T> findAll() {
         return null;
     }
 }

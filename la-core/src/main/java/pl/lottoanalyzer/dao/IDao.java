@@ -8,5 +8,5 @@ public interface IDao<T> {
 
     public void save(T entity);
 
-    public List<Result> findAll();
+    public List<T> findAll();
 }

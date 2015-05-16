@@ -11,7 +11,8 @@ import java.util.Date;
 @Table
 public class Result {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HIBERNATE_SEQUENCE")
+    @SequenceGenerator(name = "HIBERNATE_SEQUENCE", sequenceName="HIBERNATE_SEQUENCE")
     private Integer id;
     private Integer lortNumber;
   //  @Column(name = "lotNumber")

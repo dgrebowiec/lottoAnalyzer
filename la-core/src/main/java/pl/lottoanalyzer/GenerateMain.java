@@ -10,7 +10,7 @@ public class GenerateMain {
 
     public static void main(String[] args){
 
-        new ClassPathXmlApplicationContext("spring/applicationContext-generatorDb.xml");
+//        new ClassPathXmlApplicationContext("spring/applicationContext-generatorDb.xml");
     }
 
 }

@@ -25,10 +25,6 @@ public class ImportResults {
     @Autowired
     private ResultService resultService;
 
-    @Autowired
-    private Testt testt;
-
-
     List<Result> results = new ArrayList<>();
 
     public void importFile(){

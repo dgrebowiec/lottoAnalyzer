@@ -19,7 +19,6 @@ public class ResultService {
     @Autowired
     ResultDao resultDao;
 
-
     @Transactional
     public void saveAllResults(List<Result> results){
         for(Result result : results){

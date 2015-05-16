@@ -10,6 +10,6 @@
     <context:annotation-config />
     <context:component-scan base-package="pl.lottoanalyzer"  />
 
-    <import resource="applicationContext-hibernate.xml"/>
+    <import resource="applicationContext-jpa-hibernate.xml"/>
 
 </beans>

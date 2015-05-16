@@ -35,6 +35,8 @@
         <junit.version>4.11</junit.version>
         <commons.dbcp>1.4</commons.dbcp>
         <apache.commons.version>3.4</apache.commons.version>
+        <jpa.hibernate.version>1.0.1.Final</jpa.hibernate.version>
+
     </properties>
 
     <dependencyManagement>
@@ -108,6 +110,13 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-entitymanager</artifactId>
                 <version>${hibernate-core.version}</version>
+            </dependency>
+
+            <!--JPA-->
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.0-api</artifactId>
+                <version>${jpa.hibernate.version}</version>
             </dependency>
 
 

@@ -1,9 +1,7 @@
 package pl.lottoanalyzer.dao;
 
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.support.DaoSupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import pl.lottoanalyzer.model.Result;
 
 /**
@@ -11,7 +9,7 @@ import pl.lottoanalyzer.model.Result;
  * Date: 2015-05-09
  */
 @Repository
-public class ResultDao extends TemplateDao<Result> {
+public class ResultDao extends TemplateJpaDao<Result> {
 
 
 

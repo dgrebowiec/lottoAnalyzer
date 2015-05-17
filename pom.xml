@@ -35,7 +35,8 @@
         <junit.version>4.11</junit.version>
         <commons.dbcp>1.4</commons.dbcp>
         <apache.commons.version>3.4</apache.commons.version>
-        <jpa.hibernate.version>1.0.1.Final</jpa.hibernate.version>
+        <jpa.hibernate.version>1.0.0.Final</jpa.hibernate.version>
+        <querydsl.version> 3.5.0</querydsl.version>
 
     </properties>
 
@@ -115,9 +116,30 @@
             <!--JPA-->
             <dependency>
                 <groupId>org.hibernate.javax.persistence</groupId>
-                <artifactId>hibernate-jpa-2.0-api</artifactId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
                 <version>${jpa.hibernate.version}</version>
             </dependency>
+
+            <!--querydsl-->
+
+            <dependency>
+                <groupId>com.mysema.querydsl</groupId>
+                <artifactId>querydsl-apt</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mysema.querydsl</groupId>
+                <artifactId>querydsl-jpa</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mysema.querydsl</groupId>
+                <artifactId>querydsl-lucene4</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+
 
 
             <!--JSF-->

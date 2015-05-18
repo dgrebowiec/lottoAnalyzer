@@ -5,8 +5,7 @@
 <hibernate-reverse-engineering>
 
     <type-mapping>
-        <sql-type jdbc-type="DECIMAL" hibernate-type="Long"
-                  precision="8" >
+        <sql-type jdbc-type="NUMERIC" hibernate-type="Long">
         </sql-type>
     </type-mapping>
 

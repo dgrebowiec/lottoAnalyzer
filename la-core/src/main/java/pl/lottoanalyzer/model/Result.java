@@ -8,11 +8,11 @@ import java.util.Date;
  */
 
 @Entity
-@Table
+@SequenceGenerator(name = "HIBERNATE_SEQUENCE", sequenceName="HIBERNATE_SEQUENCE")
 public class Result {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HIBERNATE_SEQUENCE")
-    @SequenceGenerator(name = "HIBERNATE_SEQUENCE", sequenceName="HIBERNATE_SEQUENCE")
+
     private Integer id;
     private Integer lortNumber;
   //  @Column(name = "lotNumber")

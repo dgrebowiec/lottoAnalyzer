@@ -37,6 +37,7 @@
         <apache.commons.version>3.4</apache.commons.version>
         <jpa.hibernate.version>1.0.0.Final</jpa.hibernate.version>
         <querydsl.version> 3.5.0</querydsl.version>
+        <springtest.version>4.0.0.RELEASE</springtest.version>
 
     </properties>
 
@@ -160,6 +161,13 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+
+            <!--spring test-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${springtest.version}</version>
             </dependency>
 
             <!--Other-->

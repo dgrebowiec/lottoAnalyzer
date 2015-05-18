@@ -1,6 +1,4 @@
-package pl.lottoanalyzer.dao;
-
-import pl.lottoanalyzer.model.Result;
+package pl.lottoanalyzer.dao.template;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

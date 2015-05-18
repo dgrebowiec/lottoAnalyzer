@@ -93,6 +93,13 @@
             <artifactId>junit</artifactId>
         </dependency>
 
+        <!--spring test-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springtest.version}</version>
+        </dependency>
+
         <!--Other-->
         <dependency>
             <groupId>commons-dbcp</groupId>

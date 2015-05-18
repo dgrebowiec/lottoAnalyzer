@@ -11,7 +11,8 @@ import java.util.Set;
  */
 @Entity
 @Table(name="DRAWN_NUMBER"
-    ,schema="LOTTO"
+        ,schema="LOTTO"
+        , uniqueConstraints = @UniqueConstraint(columnNames="NUMBER_VAL")
 )
 public class DrawnNumber  implements java.io.Serializable {
 
@@ -46,7 +47,7 @@ public class DrawnNumber  implements java.io.Serializable {
     }
 
     
-    @Column(name="NUMBER_VAL", nullable=false, scale=0)
+    @Column(name="NUMBER_VAL", unique=true, nullable=false, scale=0)
     public Long getNumberVal() {
         return this.numberVal;
     }

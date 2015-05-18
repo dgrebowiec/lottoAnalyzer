@@ -1,4 +1,5 @@
 pl\lottoanalyzer\ImportMain.class
 pl\lottoanalyzer\test\Testt.class
 pl\lottoanalyzer\ImportResults.class
+pl\lottoanalyzer\services\ImportService.class
 pl\lottoanalyzer\utils\ImportUtil.class

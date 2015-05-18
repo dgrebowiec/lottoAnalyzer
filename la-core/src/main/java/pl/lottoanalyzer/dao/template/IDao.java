@@ -1,4 +1,4 @@
-package pl.lottoanalyzer.dao;
+package pl.lottoanalyzer.dao.template;
 
 import pl.lottoanalyzer.model.Result;
 

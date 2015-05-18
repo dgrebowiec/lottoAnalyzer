@@ -6,7 +6,8 @@ DROP TABLE lot;
 -- create
 CREATE TABLE drawn_number(
   drawn_number_id NUMBER(19) PRIMARY KEY,
-  number_val NUMBER(19) NOT NULL
+  number_val NUMBER(19) NOT NULL,
+  CONSTRAINT uniq_number_val UNIQUE (number_val)
 );
 
 CREATE TABLE lot(

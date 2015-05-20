@@ -10,7 +10,7 @@ import pl.lottoanalyzer.model.Result;
  */
 @Repository
 public class ResultDao extends TemplateJpaDao<Result> {
-
+//test switch branches
 
 
 }

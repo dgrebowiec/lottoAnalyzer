@@ -12,11 +12,12 @@ import java.util.List;
 public class TemplateJpaDao<T> implements IDao<T> {
 
     @PersistenceContext
-    private EntityManager managerFactory;
+    protected EntityManager entityManager;
 
     @Override
     public void save(Object entity) {
-        managerFactory.persist(entity);
+        entityManager.persist(entity);
+        entityManager.flush();
     }
 
     @Override

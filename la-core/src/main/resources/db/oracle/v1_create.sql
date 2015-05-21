@@ -1,3 +1,7 @@
+CREATE USER lotto IDENTIFIED BY lotto DEFAULT TABLESPACE system QUOTA UNLIMITED ON system;
+
+GRANT ALL PRIVILEGES TO lotto;
+
 -- drop table
 DROP TABLE rel_number_lot;
 DROP TABLE drawn_number;
@@ -49,6 +53,8 @@ START WITH     1
 INCREMENT BY   1
 NOCACHE
 NOCYCLE;
+
+//COMMIT
 
 
 

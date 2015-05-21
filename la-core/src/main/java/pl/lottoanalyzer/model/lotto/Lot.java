@@ -60,7 +60,7 @@ public class Lot  implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name="LOT_DATE", nullable=false, length=7)
+    @Column(name="LOT_DATE",  nullable=false, length=7)
     public Date getLotDate() {
         return this.lotDate;
     }
@@ -79,8 +79,10 @@ public class Lot  implements java.io.Serializable {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return ">> "+lotNumber +" > "+lotDate;
+    }
 }
 
 

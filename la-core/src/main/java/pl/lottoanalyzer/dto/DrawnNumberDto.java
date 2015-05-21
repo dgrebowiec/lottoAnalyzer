@@ -3,6 +3,8 @@ package pl.lottoanalyzer.dto;
 import pl.lottoanalyzer.dto.template.IDto;
 import pl.lottoanalyzer.model.lotto.DrawnNumber;
 
+import java.util.HashSet;
+
 /**
  * User: mgalezewska
  * Date: 2015-05-18
@@ -21,6 +23,7 @@ public class DrawnNumberDto implements IDto<DrawnNumber> {
         DrawnNumber drawnNumber = new DrawnNumber();
         drawnNumber.setDrawnNumberId(drawnNumberId);
         drawnNumber.setNumberVal(numberVal);
+        drawnNumber.setRelNumberLots(new HashSet<>());
         return drawnNumber;
     }
 

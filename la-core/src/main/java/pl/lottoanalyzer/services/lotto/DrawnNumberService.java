@@ -17,8 +17,11 @@ public class DrawnNumberService {
     DrawnNumberDao drawnNumberDao;
 
     public void save(DrawnNumberDto drawnNumberDto){
-        DrawnNumber drawnNumber = drawnNumberDto.getEntity();
-        drawnNumberDao.save(drawnNumber);
+        drawnNumberDao.save(drawnNumberDto.getEntity());
+
     }
+//    public void isNumberExist(Long number){
+//        drawnNumberDao.
+//    }
 
 }

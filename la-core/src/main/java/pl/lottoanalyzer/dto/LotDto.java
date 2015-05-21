@@ -24,6 +24,7 @@ public class LotDto implements IDto<Lot> {
         Lot lot = new Lot();
         lot.setLotId(lotId);
         lot.setLotNumber(lotNumber);
+        lot.setLotDate(lotDate);
         return lot;
     }
 

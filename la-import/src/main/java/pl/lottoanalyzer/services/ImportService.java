@@ -1,6 +1,8 @@
 package pl.lottoanalyzer.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pl.lottoanalyzer.dao.LotDao;
 import pl.lottoanalyzer.dto.DrawnNumberDto;
 import pl.lottoanalyzer.dto.LotDto;
@@ -14,6 +16,7 @@ import java.util.List;
  * User: mgalezewska
  * Date: 2015-05-18
  */
+@Service
 public class ImportService {
 
     @Autowired
@@ -22,10 +25,15 @@ public class ImportService {
     @Autowired
     LotDao lotDao;
 
+
     public void saveAllResults(List<ResultDto> resultsDto){
 
+        for(ResultDto resultDto : resultsDto){
+            saveResult(resultDto);
+        }
     }
 
+    @Transactional
     public void saveResult(ResultDto resultDto){
         // 1 zapisz wylosowane liczby
         saveDrawnNumbers(resultDto.getDrawnNumbersDto());
@@ -43,9 +51,10 @@ public class ImportService {
     }
 
     public void saveLot(LotDto lotDto){
+        System.out.println(lotDto.getEntity());
         lotDao.save(lotDto.getEntity());
     }
 
-//    public void
+
 
 }

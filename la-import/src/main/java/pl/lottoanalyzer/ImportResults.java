@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pl.lottoanalyzer.dto.ResultDto;
 import pl.lottoanalyzer.model.Result;
+import pl.lottoanalyzer.services.ImportService;
+import pl.lottoanalyzer.services.LottoService;
 import pl.lottoanalyzer.services.ResultService;
 import pl.lottoanalyzer.test.Testt;
 import pl.lottoanalyzer.utils.ImportUtil;
@@ -26,6 +28,10 @@ public class ImportResults {
     @Autowired
     private ResultService resultService;
 
+    @Autowired
+    private ImportService importService;
+
+
     List<Result> results = new ArrayList<>();
     List<ResultDto> resultsDto = new ArrayList<>();
 
@@ -45,14 +51,13 @@ public class ImportResults {
     }
 
     public void setResults(String s) {
-       // results = new ArrayList<>();
         //results.add(ImportUtil.resulMapping(s));
         resultsDto.add(ImportUtil.resultMapping(s));
     }
 
     public void importResuls(){
-      //  resultService.saveAllResults(results);
-      //  testt.dupa();
+     //   resultService.saveAllResults(results);
+        importService.saveAllResults(resultsDto);
     }
 
     public void printResults(){

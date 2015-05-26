@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class ImportUtil {
 
+
     public static Result resulMapping(String line){
         Result result = new Result();
         String[] data = line.split(";");
@@ -41,12 +42,12 @@ public class ImportUtil {
 
         resultDto.setLotDto(new LotDto(Long.valueOf(data[0]), stringToDate(data[1]) ));
 
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[2])));
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[3])));
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[4])));
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[5])));
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[6])));
-        drawnNumbers.add(new DrawnNumberDto(Long.valueOf(data[7])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[2])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[3])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[4])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[5])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[6])));
+        drawnNumbers.add(new DrawnNumberDto(Integer.valueOf(data[7])));
         resultDto.setDrawnNumbersDto(drawnNumbers);
 
 

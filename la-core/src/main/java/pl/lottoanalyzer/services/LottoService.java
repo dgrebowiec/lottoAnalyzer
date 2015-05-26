@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.lottoanalyzer.dao.DrawnNumberDao;
 import pl.lottoanalyzer.dao.LotDao;
-import pl.lottoanalyzer.dao.RelNumberLotDao;
 
 /**
  * User: mgalezewska
@@ -16,9 +15,6 @@ public class LottoService {
 
     @Autowired
     LotDao lotDao;
-
-    @Autowired
-    RelNumberLotDao numberLotDao;
 
     @Autowired
     DrawnNumberDao drawnNumberDao;

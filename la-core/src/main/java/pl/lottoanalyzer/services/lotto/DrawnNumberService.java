@@ -2,7 +2,7 @@ package pl.lottoanalyzer.services.lotto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.lottoanalyzer.dao.DrawnNumberDao;
+import pl.lottoanalyzer.dao.IDrawnNumberDao;
 import pl.lottoanalyzer.dto.DrawnNumberDto;
 import pl.lottoanalyzer.model.lotto.DrawnNumber;
 
@@ -14,11 +14,10 @@ import pl.lottoanalyzer.model.lotto.DrawnNumber;
 public class DrawnNumberService {
 
     @Autowired
-    DrawnNumberDao drawnNumberDao;
+    IDrawnNumberDao drawnNumberDao;
 
-    public void save(DrawnNumberDto drawnNumberDto){
-        drawnNumberDao.save(drawnNumberDto.getEntity());
-
+    public DrawnNumber save(DrawnNumberDto drawnNumberDto){
+        return drawnNumberDao.save(drawnNumberDto.getEntity());
     }
 //    public void isNumberExist(Long number){
 //        drawnNumberDao.

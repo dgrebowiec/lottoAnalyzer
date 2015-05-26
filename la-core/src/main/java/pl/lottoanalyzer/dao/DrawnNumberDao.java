@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.lottoanalyzer.dao.template.TemplateJpaDao;
 import pl.lottoanalyzer.model.lotto.DrawnNumber;
 
+import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -14,7 +15,9 @@ import javax.persistence.criteria.Root;
  * Date: 2015-05-18
  */
 @Repository
-public class DrawnNumberDao extends TemplateJpaDao<DrawnNumber> {
+public class DrawnNumberDao extends TemplateJpaDao<DrawnNumber, Long> {
+
+
 
     public DrawnNumber findNumberByNumber(Long number){
 

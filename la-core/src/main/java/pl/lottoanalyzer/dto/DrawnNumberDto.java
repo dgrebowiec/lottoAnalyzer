@@ -2,8 +2,10 @@ package pl.lottoanalyzer.dto;
 
 import pl.lottoanalyzer.dto.template.IDto;
 import pl.lottoanalyzer.model.lotto.DrawnNumber;
+import pl.lottoanalyzer.model.lotto.Lot;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * User: mgalezewska
@@ -12,9 +14,9 @@ import java.util.HashSet;
 public class DrawnNumberDto implements IDto<DrawnNumber> {
 
     private Long drawnNumberId;
-    private Long numberVal;
+    private Integer numberVal;
 
-    public DrawnNumberDto(Long numberVal) {
+    public DrawnNumberDto(Integer numberVal) {
         this.numberVal = numberVal;
     }
 
@@ -23,7 +25,6 @@ public class DrawnNumberDto implements IDto<DrawnNumber> {
         DrawnNumber drawnNumber = new DrawnNumber();
         drawnNumber.setDrawnNumberId(drawnNumberId);
         drawnNumber.setNumberVal(numberVal);
-        drawnNumber.setRelNumberLots(new HashSet<>());
         return drawnNumber;
     }
 
@@ -35,11 +36,12 @@ public class DrawnNumberDto implements IDto<DrawnNumber> {
         this.drawnNumberId = drawnNumberId;
     }
 
-    public Long getNumberVal() {
+    public Integer getNumberVal() {
         return numberVal;
     }
 
-    public void setNumberVal(Long numberVal) {
+    public void setNumberVal(Integer numberVal) {
         this.numberVal = numberVal;
     }
+
 }

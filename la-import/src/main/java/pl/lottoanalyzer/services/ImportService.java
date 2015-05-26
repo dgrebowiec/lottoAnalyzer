@@ -3,14 +3,21 @@ package pl.lottoanalyzer.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.lottoanalyzer.dao.DrawnNumberDao;
+import pl.lottoanalyzer.dao.IDrawnNumberDao;
+import pl.lottoanalyzer.dao.ILotDao;
 import pl.lottoanalyzer.dao.LotDao;
 import pl.lottoanalyzer.dto.DrawnNumberDto;
 import pl.lottoanalyzer.dto.LotDto;
 import pl.lottoanalyzer.dto.ResultDto;
+import pl.lottoanalyzer.model.lotto.DrawnNumber;
 import pl.lottoanalyzer.model.lotto.Lot;
 import pl.lottoanalyzer.services.lotto.DrawnNumberService;
+import pl.lottoanalyzer.utils.DrawnNumberUtil;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * User: mgalezewska
@@ -20,41 +27,44 @@ import java.util.List;
 public class ImportService {
 
     @Autowired
-    DrawnNumberService drawnNumberService;
+    IDrawnNumberDao drawnNumberDao;
 
     @Autowired
-    LotDao lotDao;
+    ILotDao lotDao;
 
 
+    @Transactional
     public void saveAllResults(List<ResultDto> resultsDto){
-
+        saveDrawnNumbers();
         for(ResultDto resultDto : resultsDto){
             saveResult(resultDto);
         }
     }
 
-    @Transactional
-    public void saveResult(ResultDto resultDto){
-        // 1 zapisz wylosowane liczby
-        saveDrawnNumbers(resultDto.getDrawnNumbersDto());
-        // 2 zapisz losowanie
-        saveLot(resultDto.getLotDto());
+
+    private void saveResult(ResultDto resultDto){
+        // 1 zapisz losowanie
+        saveLot(resultDto);
+        // 2 zapisz wylosowane liczby
+
         // 3 zapisz relacje
 
     }
 
-
-    public void saveDrawnNumbers(List<DrawnNumberDto> drawnNumbersDto){
-        for (DrawnNumberDto drawnNumberDto : drawnNumbersDto){
-            drawnNumberService.save(drawnNumberDto);
+    @Transactional
+    private void saveDrawnNumbers(){
+        for(Integer number : DrawnNumberUtil.NUMBERS){
+            DrawnNumberDto drawnNumberDto = new DrawnNumberDto(number);
+            drawnNumberDao.save(drawnNumberDto.getEntity());
         }
     }
 
-    public void saveLot(LotDto lotDto){
-        System.out.println(lotDto.getEntity());
+    private void saveLot(ResultDto resultDto){
+        LotDto lotDto = resultDto.getLotDto();
+        Set<DrawnNumber> drawnNumbers = drawnNumberDao.findByNumberValIn(resultDto.getDrawnNumbers());
+        lotDto.setDrawnNumbers(drawnNumbers);
         lotDao.save(lotDto.getEntity());
     }
-
 
 
 }

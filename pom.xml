@@ -13,8 +13,9 @@
         <!--<module>la-core</module>-->
         <module>la-integration</module>
         <module>la-core</module>
-        <module>la-web</module>
         <module>la-import</module>
+        <module>la-web-jsf</module>
+        <module>la-web-angular</module>
         <!--<module>la-android</module>-->
     </modules>
 

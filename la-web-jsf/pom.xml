@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>pl.lottoanalyzer</groupId>
-    <artifactId>la-web</artifactId>
+    <artifactId>la-web-jsf</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
